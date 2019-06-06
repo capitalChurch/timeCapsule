@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapsulaTempo", "CapsulaTempo\CapsulaTempo.csproj", "{AA96B5C9-33CE-4C6D-9F8D-E17481F52111}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeCapsule", "TimeCapsule\TimeCapsule.csproj", "{AA96B5C9-33CE-4C6D-9F8D-E17481F52111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
