@@ -13,7 +13,7 @@
     h1{
         font-family: 'Biotif-Black', sans-serif;
         text-transform: uppercase;
-        margin: 32px 0;
+        margin: 40px 0 0;
         font-size: $h1FontSize;
         line-height: $h1FontSize * .9;
         color: $darkColor;

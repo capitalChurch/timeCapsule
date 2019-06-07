@@ -21,9 +21,9 @@
 <style lang="scss">
     @import "../theme";
     .information {
-        width: 35%;
+        width: 32%;
         color: white;
-        padding: 0 32px;
+        padding: 0 64px 0 32px;
         .title {
             font-family: 'Biotif-Black', sans-serif;
             font-size: $h5FontSize;

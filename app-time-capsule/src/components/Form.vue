@@ -28,8 +28,10 @@
             <input type="text">
         </div>
         <div>
-            <button>enviar para o futuro!</button>
-            <span class="hint">Vodê receberá um email de confirmação.</span>
+            <button>
+                <span>enviar para o futuro!</span>
+            </button>
+            <span class="hint">Você receberá um email de confirmação.</span>
         </div>
     </div>
 </template>
@@ -42,6 +44,9 @@
 
 <style scoped lang="scss">
     @import "../theme";
+
+    $radius: 24px;
+
     .form{
         width: 40%;
         display: flex;
@@ -66,7 +71,6 @@
 
             .options{
                 display: flex;
-                padding: 0 8px;
 
                 &:first-child{
                     padding-left: 0;
@@ -79,10 +83,21 @@
                     text-transform: uppercase;
                     font-size: 12px;
                     letter-spacing: 2px;
-                    border-radius: 24px;
+                    border-radius: $radius;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: $darkColorHover;
+                        transform: scale(1.01);
+                        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);;
+                    }
 
                     &.active{
                         background: $primaryColor;
+
+                        &:hover{
+                            background: $primaryColorHover;
+                        }
                     }
 
                     span{
@@ -92,6 +107,46 @@
                     &:first-child{
                         margin: 0;
                     }
+                }
+            }
+
+            button{
+                background: $buttonColor;
+                border: none;
+                text-transform: uppercase;
+                font-family: 'Biotif-Black', sans-serif;
+                letter-spacing: 2px;
+                padding: 8px;
+                cursor: pointer;
+                &:focus{
+                    outline: none;
+                }
+
+                &:hover{
+                    background: $buttonColorHover;
+                    transform: scale(1.01);
+                    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);;
+                }
+                span{
+                    position: relative;
+                    top: 2px;
+                }
+            }
+
+            .hint{
+                padding: 4px 0;
+                font-family: 'Biotif', sans-serif;
+                font-size: 12px;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+            input{
+                border-radius: $radius;
+                border: 1px solid $darkColor;
+                padding: 8px 16px;
+                &:focus{
+                    outline: none;
                 }
             }
 
