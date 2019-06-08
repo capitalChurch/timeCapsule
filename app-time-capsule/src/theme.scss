@@ -6,12 +6,27 @@ $darkColor: #202020;
 $darkColorHover: #2d2d2d;
 
 $h1FontSize: 170px;
+$h1TabletFontSize: 120px;
 
 $h1MobileFontSize: 72px;
-$h1MediumMobileFontSize: 60px;
+$h1MediumMobileFontSize: 64px;
 $h1SmallMobileFontSize: 52px;
 
 $h5FontSize: 44px;
+$h5MobileFontSize: 32px;
+$h5MediumMobileFontSize: 24px;
+$h5SmallMobileFontSize: 24px;
 
 $normalFontSize: 16px;
-$width: 50vw;
+$width: 1024px;
+$widthTablet: 800px;
+
+$maxWidthSmallDesktop: 1024px;
+$maxWidthTablet: 768px;
+$maxWidthMobile: 425px;
+$maxWidthMediumMobile: 375px;
+$maxWidthSmallMobile: 340px;
+
+$marginOnTablet: 80px;
+$marginMobile: 32px;
+$marginMediumMobile: 24px;

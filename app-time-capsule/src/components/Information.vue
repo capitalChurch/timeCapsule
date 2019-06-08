@@ -24,6 +24,7 @@
         width: 32%;
         color: white;
         padding: 0 64px 0 32px;
+
         .title {
             font-family: 'Biotif-Black', sans-serif;
             font-size: $h5FontSize;
@@ -36,6 +37,38 @@
 
             >p{
                 margin: 32px 0;
+            }
+        }
+
+        @media only screen and (max-width: $maxWidthSmallDesktop){
+            padding: 0;
+        }
+
+        @media only screen and (max-width:$maxWidthTablet){
+            width: unset;
+            margin: 0 $marginOnTablet;
+        }
+
+        @media only screen and (max-width: $maxWidthMobile) {
+            margin: 0 $marginMobile;
+            .title{
+                font-size: $h5MobileFontSize;
+                line-height: $h5MobileFontSize * .9;
+            }
+        }
+
+        @media only screen and (max-width: $maxWidthMediumMobile) {
+            margin: 0 $marginMediumMobile;
+            .title{
+                font-size: $h5MediumMobileFontSize;
+                line-height: $h5MediumMobileFontSize * .9;
+            }
+        }
+
+        @media only screen and (max-width: $maxWidthSmallMobile) {
+            .title{
+                font-size: $h5SmallMobileFontSize;
+                line-height: $h5SmallMobileFontSize * .9;
             }
         }
     }

@@ -20,17 +20,33 @@
 <style scoped lang="scss">
     @import "../theme";
     .footer{
-        height: 80px;
+        min-height: 80px;
         background: $darkColor;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width:$maxWidthTablet){
+            padding: 0 $marginOnTablet;
+        }
+
+        @media only screen and (max-width:$maxWidthMobile){
+            padding: 0 $marginMobile;
+        }
+
+        @media only screen and (max-width:$maxWidthMediumMobile){
+            padding: 0 $marginMediumMobile;
+        }
+
         .body{
             width: $width;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
+            @media only screen and (max-width: $width){
+                width: $widthTablet;
+            }
             .labels{
                 color: $primaryColor;
                 font-family: 'Biotif', sans-serif;
@@ -46,6 +62,24 @@
             img{
                 transform: translateX(-48px);
                 width: 32px;
+            }
+
+
+            @media only screen and (max-width: $maxWidthMobile){
+                flex-direction: column-reverse;
+                padding: 8px 0;
+                .labels {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    span {
+                        padding: 8px 16px;
+                    }
+                }
+                img{
+                    margin: 24px 0;
+                    transform: unset;
+                }
             }
         }
     }

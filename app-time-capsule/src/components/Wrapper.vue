@@ -43,6 +43,14 @@
         .body{
             display: flex;
             margin: 32px 0 48px;
+
+            @media only screen and (max-width: $maxWidthSmallDesktop){
+                justify-content: space-around;
+            }
+            @media only screen and (max-width: $maxWidthTablet) {
+                flex-direction: column;
+                width: unset;
+            }
         }
     }
 </style>

@@ -53,6 +53,7 @@
         flex-direction: column;
         background: white;
         padding: 8px 32px 24px;
+        margin: 0 32px;
         font-family: 'Biotif-Black', sans-serif;
 
         >div{
@@ -167,6 +168,27 @@
                     vertical-align: middle;
                     padding: 0 4px;
                 }
+            }
+        }
+
+        @media only screen and (max-width: $maxWidthSmallDesktop){
+            margin: 0;
+        }
+
+        @media only screen and (max-width: $maxWidthTablet) {
+            width: unset;
+            margin: 0 $marginOnTablet;
+        }
+
+        @media only screen and (max-width: $maxWidthMobile) {
+            margin: 0 $marginMobile;
+            padding: 8px 24px;
+        }
+
+        @media only screen and (max-width: $maxWidthMediumMobile) {
+            margin: 0 $marginMediumMobile;
+            >div .label{
+                font-size: 12px;
             }
         }
     }
