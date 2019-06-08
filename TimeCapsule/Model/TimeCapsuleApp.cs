@@ -28,8 +28,6 @@ namespace TimeCapsule.Model
         {
             message.Id = await GetNextId();
             message.DateRegister = DateTime.UtcNow;
-            //Todo takeout this part
-            message.DateRegister = DateTime.UtcNow.AddYears(message.YearsToSend * -1).AddDays(-1);
             await SaveMessage(message);
             return message;
         }

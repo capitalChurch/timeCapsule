@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <div class="body">
+        <div class="bodyFooter">
             <div class="labels">
                 <span>© 2018 Igreja Batista Capital®</span>
                 <span>All rights reserved</span>
@@ -38,7 +38,7 @@
             padding: 0 $marginMediumMobile;
         }
 
-        .body{
+        .bodyFooter{
             width: $width;
             display: flex;
             justify-content: space-between;
@@ -64,6 +64,11 @@
                 width: 32px;
             }
 
+            @media only screen and (max-width: $maxWidthTablet) {
+                img{
+                    transform: unset;
+                }
+            }
 
             @media only screen and (max-width: $maxWidthMobile){
                 flex-direction: column-reverse;
@@ -78,7 +83,6 @@
                 }
                 img{
                     margin: 24px 0;
-                    transform: unset;
                 }
             }
         }

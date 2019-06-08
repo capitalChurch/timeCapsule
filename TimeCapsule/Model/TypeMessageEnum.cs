@@ -2,7 +2,7 @@ namespace TimeCapsule.Model
 {
     public enum TypeMessageEnum
     {
-        @public,
-        @private
+        TypeMessagePublic,
+        TypeMessagePrivate
     }
 }
