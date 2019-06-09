@@ -7,10 +7,11 @@ export const saveMessage = (obj: Message, callBack: () => void, callBackError: (
     const urlProduction = 'http://cartaparaofuturo.azurewebsites.net/';
     const urlDevelopment = 'http://localhost:44396/';
     const urlBase = process.env.NODE_ENV === development ? urlDevelopment : urlProduction;
-    const url = `${urlBase}api`;
+    const url = `${urlProduction}api`;
     const urlMessage = `${url}/TimeCapsule/`;
 
     axios.post(urlMessage, obj)
         .then(callBack)
         .catch(callBackError);
 };
+

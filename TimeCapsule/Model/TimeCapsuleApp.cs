@@ -29,6 +29,7 @@ namespace TimeCapsule.Model
             message.Id = await GetNextId();
             message.DateRegister = DateTime.UtcNow;
             await SaveMessage(message);
+            await this._sendEmailApp.SendNotification(message);
             return message;
         }
 

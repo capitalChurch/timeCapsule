@@ -26,7 +26,7 @@ namespace CapsulaTempo
             services.AddCors(options =>
             {
                 options.AddPolicy(this._corsPolicyName, builder =>
-                    builder.WithOrigins("http://*.igrejacapital.org.br",
+                    builder.WithOrigins("http://cartaparaofuturo.igrejacapital.org.br",
                             "http://cartaparaofuturo.igrejacapital.org.br.s3-website-sa-east-1.amazonaws.com")
                         .AllowAnyHeader()
                         .AllowAnyMethod());
@@ -49,9 +49,6 @@ namespace CapsulaTempo
                 app.UseDeveloperExceptionPage();
                 app.UseCors(this._corsInDevelopment);
             }
-            
-            //todo takeout this part
-            app.UseCors(this._corsInDevelopment);
             
             app.UseCors(this._corsPolicyName);
             app.UseMvc();

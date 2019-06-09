@@ -2,16 +2,19 @@
     <div class="footer">
         <div class="bodyFooter">
             <div class="labels">
-                <span>© 2018 Igreja Batista Capital®</span>
+                <span>© 2019 Igreja Batista Capital®</span>
                 <span>All rights reserved</span>
                 <span>Legal</span>
             </div>
-            <img src="../assets/logoIgreja.svg" title="Igreja Batista Capital" />
+            <a href="http://www.igrejacapital.org.br" title="igreja capital">
+                <img src="../assets/logoIgreja.svg" title="Igreja Batista Capital" />
+            </a>
         </div>
     </div>
 </template>
 
 <script>
+    const imgPngChurch = require('../assets/logoIgreja.png');
     export default {
         name: "Footer"
     }

@@ -35,5 +35,28 @@ namespace TimeCapsule.Model
                 throw new Exception("Email was not sent. See the inner Exception", new Exception(textResponse));
             }
         }
+
+        public async Task SendNotification(Message obj)
+        {
+            var to = new EmailAddress(obj.Email);
+
+            var msg = new SendGridMessage()
+            {
+                From = Constants.FromEmail,
+                ReplyTo = Constants.ResponseEmailAddress,
+                Subject = Constants.SubjectNotification,
+                PlainTextContent = Constants.TextEmailNotification,
+                HtmlContent = Constants.HtmlEmailNotification
+            };
+            
+            msg.AddTo(to);
+
+            var response = await _client.SendEmailAsync(msg);
+            if (response.StatusCode != HttpStatusCode.Accepted)
+            {
+                var textResponse = await response.Body.ReadAsStringAsync();
+                throw new Exception("Email was not sent. See the inner Exception", new Exception(textResponse));
+            }
+        }
     }
 }
