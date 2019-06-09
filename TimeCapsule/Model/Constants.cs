@@ -14,6 +14,8 @@ namespace TimeCapsule.Model
         private const string EmailAddressResponse = "comunicacao@igrejaCapital.org.br";
         public static EmailAddress FromEmail => new EmailAddress(FromEmailAddress, FromEmailName);
         public static EmailAddress ResponseEmailAddress  => new EmailAddress(EmailAddressResponse);
+        
+        public static EmailAddress TechnicalResponseEmailAddress => new EmailAddress("kevynsax@gmail.com", "kevyn pinheiro klava");
 
         public const string SubjectFromThePast = "Sua carta finalmente chegou!";
 

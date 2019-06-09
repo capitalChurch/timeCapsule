@@ -44,6 +44,8 @@ namespace TimeCapsule.Model
                 await DeleteFile(msg);
                 await SaveMessage(msg);
             }
+
+            await this._sendEmailApp.SendNotificationFinishesTheJob(list.Count);
             
             return list;
         }

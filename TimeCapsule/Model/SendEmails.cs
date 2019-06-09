@@ -58,5 +58,21 @@ namespace TimeCapsule.Model
                 throw new Exception("Email was not sent. See the inner Exception", new Exception(textResponse));
             }
         }
+
+        public async Task SendNotificationFinishesTheJob(int qtySetEmails)
+        {
+
+            var msg = MailHelper.CreateSingleEmail(
+                Constants.FromEmail,
+                Constants.TechnicalResponseEmailAddress, "[TimeCapsule] BatchProccess",
+                $"foram enviados {qtySetEmails}", "");
+
+            var response = await _client.SendEmailAsync(msg);
+            if (response.StatusCode != HttpStatusCode.Accepted)
+            {
+                var textResponse = await response.Body.ReadAsStringAsync();
+                throw new Exception("Náo foi possivel enviar o email de notificacao de processo", new Exception(textResponse));
+            }
+        }
     }
 }
