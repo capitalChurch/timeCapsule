@@ -28,3 +28,11 @@ namespace TimeCapsule.Model
 
     }
 }
+
+cd /media/sourceCode/TimeCapsule
+git pull
+cd TimeCapsule
+docker build -t time-capsule-back .
+docker stop time-capsule-back
+docker rm time-capsule-back
+docker run -d --name time-capsule-back --net br0 time-capsule
