@@ -9,7 +9,7 @@ namespace TimeCapsule.Model
         public static string IdAccessKey = Environment.GetEnvironmentVariable("AWS_ID_KEY");
         public const string BucketName = "timecapsuleemails";
         
-        public static string SendGridApiKey = Environment.GetEnvironmentVariable("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");
+        public static string SendGridApiKey = Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
         private const string FromEmailAddress = "cartaparaofuturo@igrejaCapital.org.br";
         private const string FromEmailName = "Capsula do Tempo";
         private const string EmailAddressResponse = "comunicacao@igrejaCapital.org.br";
