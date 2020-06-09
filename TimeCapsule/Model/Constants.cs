@@ -5,8 +5,8 @@ namespace TimeCapsule.Model
 {
     public static class Constants
     {
-        public static string SecretKey => Environment.GetEnvironmentVariable("AWS_ID_KEY");
-        public static string IdAccessKey = Environment.GetEnvironmentVariable("AWS_SECRET_KEY");
+        public static string SecretKey => Environment.GetEnvironmentVariable("AWS_SECRET_KEY");
+        public static string IdAccessKey = Environment.GetEnvironmentVariable("AWS_ID_KEY");
         public const string BucketName = "timecapsuleemails";
         
         public static string SendGridApiKey = Environment.GetEnvironmentVariable("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");
