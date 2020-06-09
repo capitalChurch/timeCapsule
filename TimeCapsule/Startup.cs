@@ -27,9 +27,11 @@ namespace CapsulaTempo
             {
                 options.AddPolicy(this._corsPolicyName, builder =>
                     builder.WithOrigins("http://cartaparaofuturo.igrejacapital.org.br",
-                            "http://cartaparaofuturo.igrejacapital.org.br.s3-website-sa-east-1.amazonaws.com")
+                            "http://cartaparaofuturo.igrejacapital.org.br.s3-website-sa-east-1.amazonaws.com",
+							"https://www.kevynklava.com")
                         .AllowAnyHeader()
                         .AllowAnyMethod());
+
                 
                 options.AddPolicy(this._corsInDevelopment, builder => 
                     builder.WithOrigins("http://192.168.0.16:8080")
