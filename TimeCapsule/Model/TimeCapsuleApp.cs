@@ -40,8 +40,8 @@ namespace TimeCapsule.Model
             foreach (var msg in list)
             {
                 await _sendEmailApp.SendMessage(msg);
-                msg.MessageSent = true;
                 await DeleteFile(msg);
+                msg.MessageSent = true;
                 await SaveMessage(msg);
             }
 
