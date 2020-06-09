@@ -4,7 +4,7 @@ import axios from 'axios';
 const development = 'development';
 
 export const saveMessage = (obj: Message, callBack: () => void, callBackError: (err: any) => void): void => {
-    const urlProduction = 'https://159.65.102.222/time-capsule';
+    const urlProduction = 'https://kevynklava.com/time-capsule';
     const urlDevelopment = 'http://localhost:44396/api';
     const url = process.env.NODE_ENV === development ? urlDevelopment : urlProduction;
     const urlMessage = `${url}/TimeCapsule/`;
