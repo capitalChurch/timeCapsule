@@ -20,7 +20,7 @@ namespace CapsulaTempo
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<TimeCapsuleApp>();
+            services.AddTransient<ITimeCapsuleApp, TimeCapsuleApp>();
             services.AddTransient<SendEmails>();
 
             services.AddCors(options =>

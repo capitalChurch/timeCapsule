@@ -9,9 +9,9 @@ namespace TimeCapsule.Controllers
     [ApiController]
     public class TimeCapsuleController : ControllerBase
     {
-        private readonly TimeCapsuleApp _app;
+        private readonly ITimeCapsuleApp _app;
 
-        public TimeCapsuleController(TimeCapsuleApp app)
+        public TimeCapsuleController(ITimeCapsuleApp app)
         {
             _app = app;
         }

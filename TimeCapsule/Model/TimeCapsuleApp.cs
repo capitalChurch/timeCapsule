@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 
 namespace TimeCapsule.Model
 {
-    public class TimeCapsuleApp
+    public class TimeCapsuleApp : ITimeCapsuleApp
     {
         private const string SeparatorString = " - ";
         private static readonly AWSCredentials Credentials = new BasicAWSCredentials(Constants.IdAccessKey, Constants.SecretKey);
