@@ -1,6 +1,9 @@
 FROM node:12.18 as build
 WORKDIR /app
 COPY . .
+
+ENV PUBLIC_URL=/time-capsule/
+
 RUN npm install --silent
 RUN npm run build
 
