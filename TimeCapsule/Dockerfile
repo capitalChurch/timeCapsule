@@ -1,15 +1,11 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.1-alpine as build-stage
+FROM mcr.microsoft.com/dotnet/core/sdk:2.1 as build-stage
 WORKDIR /app
 COPY . .
-RUN dotnet publish -c Release -o build -r linux-musl-x64
+RUN dotnet publish -c Release -o build
 
-FROM alpine
-RUN apk update && apk add libstdc++ libintl icu 
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
 WORKDIR /app
 COPY --from=build-stage /app/build .
-
 ENV ASPNETCORE_URLS=http://+:80
-
 EXPOSE 80
-ENTRYPOINT ["/app/TimeCapsule"]
-
+ENTRYPOINT ["dotnet", "TimeCapsule.dll"]
