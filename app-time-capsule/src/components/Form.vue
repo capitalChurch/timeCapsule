@@ -46,59 +46,59 @@
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from "vue-property-decorator";
-    import {Message} from "@/model/types/Message";
-    import {TypeMessageEnum} from "@/model/types/TypeMessageEnum";
-    import {saveMessage} from "@/model/model";
+import {Component, Vue} from 'vue-property-decorator';
+    import {Message} from '@/model/types/Message';
+    import {TypeMessageEnum} from '@/model/types/TypeMessageEnum';
+    import {saveMessage} from '@/model/model';
     import Loader from '@/components/Loader.vue';
     import {Option} from '@/model/types/Option';
     import {successPath} from '@/model/constants';
 
     @Component({
-        components: {Loader}
+        components: {Loader},
     })
-    export default class Form extends Vue{
-        public readonly optionsYears: Option<number>[] = [
+    export default class Form extends Vue {
+        public readonly optionsYears: Array<Option<number>> = [
             {id: 1, label: '1 Ano'},
-            //{id: 3, label: '3 Ano'},
-            //{id: 5, label: '5 Ano'},
+            // {id: 3, label: '3 Ano'},
+            // {id: 5, label: '5 Ano'},
         ];
 
-        public readonly optionsTypeMessage: Option<TypeMessageEnum>[] = [
-            {id: TypeMessageEnum.TypeMessagePrivate, label: "Privada"},
-            {id: TypeMessageEnum.TypeMessagePublic, label: "Pública"}
+        public readonly optionsTypeMessage: Array<Option<TypeMessageEnum>> = [
+            {id: TypeMessageEnum.TypeMessagePrivate, label: 'Privada'},
+            {id: TypeMessageEnum.TypeMessagePublic, label: 'Pública'},
         ];
 
         public objToSend: Message = {
             dateRegister: new Date(),
-            email: "",
-            text: "",
+            email: '',
+            text: '',
             type: TypeMessageEnum.TypeMessagePublic,
-            yearsToSend: 1
+            yearsToSend: 1,
         };
 
         public formWithError: boolean = false;
         public formSubmitted: boolean = false;
 
         public optionYearToSendActive = (obj: Option<number>): boolean =>
-            this.objToSend.yearsToSend === obj.id;
+            this.objToSend.yearsToSend === obj.id
 
         public optionTypeLetterActive = (obj: Option<TypeMessageEnum>): boolean =>
-            this.objToSend.type === obj.id;
+            this.objToSend.type === obj.id
 
         public chooseOptionYearToSend = (obj: Option<number>): void => {
-            this.objToSend.yearsToSend = obj.id
-        };
+            this.objToSend.yearsToSend = obj.id;
+        }
 
         public chooseOptionTypeLetter = (obj: Option<TypeMessageEnum>): void => {
             this.objToSend.type = obj.id;
-        };
+        }
 
-        public sendMessage(): void{
+        public sendMessage(): void {
             this.formSubmitted = true;
 
             saveMessage(this.objToSend, () => window.location.assign(successPath),
-                err => {
+                (err) => {
                     this.formWithError = true;
                     this.formSubmitted = false;
                     console.error(err);
@@ -108,7 +108,7 @@
 </script>
 
 <style scoped lang="scss">
-    @import "../theme";
+    @use "../theme" as *;
 
     $radius: 24px;
 

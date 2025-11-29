@@ -16,11 +16,11 @@
     </div>
 </template>
 <script lang="ts">
-    import {Vue, Component} from 'vue-property-decorator';
+import {Vue, Component} from 'vue-property-decorator';
     import Title from '@/components/Title.vue';
     import Footer from '@/components/Footer.vue';
 
-    interface socialNetwork{
+    interface socialNetwork {
         name: string;
         link: string;
         filePath: any;
@@ -28,22 +28,22 @@
     @Component({
         components: {
             Footer,
-            Title
-        }
+            Title,
+        },
     })
-    export default class Success extends Vue{
+    export default class Success extends Vue {
         public socialNetworks: socialNetwork[] = [
-            {name: "instagram", filePath: "instagram.png", link: "https://www.instagram.com/igrejabcapital/"},
-            {name: "facebook", filePath: "facebook.png", link: "https://www.facebook.com/igrejabcapital/"},
-            {name: "twitter", filePath: "twitter.png", link: "https://twitter.com/igrejabcapital"}
+            {name: 'instagram', filePath: 'instagram.png', link: 'https://www.instagram.com/igrejabcapital/'},
+            {name: 'facebook', filePath: 'facebook.png', link: 'https://www.facebook.com/igrejabcapital/'},
+            {name: 'twitter', filePath: 'twitter.png', link: 'https://twitter.com/igrejabcapital'},
         ];
 
         public getImage = (obj: socialNetwork) =>
-            require(`../assets/${obj.filePath}`);
+            require(`../assets/${obj.filePath}`)
     }
 </script>
 <style lang="scss">
-    @import "../theme";
+    @use "../theme" as *;
     .success{
         display: flex;
         flex-direction: column;

@@ -1,4 +1,4 @@
-export enum TypeMessageEnum{
+export enum TypeMessageEnum {
     TypeMessagePublic,
-    TypeMessagePrivate
+    TypeMessagePrivate,
 }

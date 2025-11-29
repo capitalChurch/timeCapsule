@@ -21,7 +21,7 @@
 </script>
 
 <style scoped lang="scss">
-    @import "../theme";
+    @use "../theme" as *;
     .footer{
         min-height: 80px;
         background: $darkColor;

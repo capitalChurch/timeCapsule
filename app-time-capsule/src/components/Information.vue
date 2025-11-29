@@ -19,7 +19,7 @@
 </script>
 
 <style lang="scss">
-    @import "../theme";
+    @use "../theme" as *;
     .information {
         width: 32%;
         color: white;

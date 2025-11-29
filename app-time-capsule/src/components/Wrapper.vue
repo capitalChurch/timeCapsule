@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
     import Title from '@/components/Title.vue';
     import Information from '@/components/Information.vue';
     import Form from '@/components/Form.vue';
@@ -20,14 +20,14 @@
             Footer,
             Form,
             Title,
-            Information
+            Information,
         },
     })
     export default class Wrapper extends Vue {}
 </script>
 
 <style scoped lang="scss">
-    @import "../theme";
+    @use "../theme" as *;
 
     .wrapper{
         background: $primaryColor;

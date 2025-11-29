@@ -11,7 +11,7 @@
 </script>
 
 <style lang="scss">
-    @import "../theme";
+    @use "../theme" as *;
     .bigTitle{
         @media only screen and (max-width: $maxWidthSmallDesktop) {
             width: unset !important;

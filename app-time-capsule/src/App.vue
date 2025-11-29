@@ -12,18 +12,18 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Wrapper from '@/components/Wrapper.vue';
 import Footer from '@/components/Footer.vue';
-import {successPath} from "@/model/constants";
+import {successPath} from '@/model/constants';
 import Success from '@/components/Success.vue';
 
 @Component({
   components: {
     Success,
     Wrapper,
-    Footer
+    Footer,
   },
 })
 export default class App extends Vue {
-  public get showSuccess(): boolean{
+  public get showSuccess(): boolean {
     return window.location.pathname === successPath;
   }
 }
